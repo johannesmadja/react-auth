@@ -12,11 +12,13 @@ function Header() {
       </div>
 
       <nav className={styles.headerList}>
-        <NavLink to="/signup" className="btn btn-primary mr-15">
+        <NavLink to="/signup" className="mr-15">
           Inscription
         </NavLink>
 
-        <button className="btn btn-primary">Connexion</button>
+        <NavLink to="/signin" className="mr-15">
+          Connexion
+        </NavLink>
       </nav>
     </header>
   );

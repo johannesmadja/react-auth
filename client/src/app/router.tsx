@@ -10,19 +10,23 @@ const lazyPage =
   });
 
 export const ROUTER = createBrowserRouter([
-    {
-        path : "/", 
-        Component : App, 
-        HydrateFallback : Loading,
-        children : [
-            {
-                index : true, 
-                 lazy: lazyPage(() => import("@/features/home/pages/HomePage")),
-            }, 
-            {
-                path : "signup", 
-                 lazy: lazyPage(() => import("@/features/signup/pages/SignUpPage")),
-            }
-        ]
-    }
-])
+  {
+    path: "/",
+    Component: App,
+    HydrateFallback: Loading,
+    children: [
+      {
+        index: true,
+        lazy: lazyPage(() => import("@/features/home/pages/HomePage")),
+      },
+      {
+        path: "signup",
+        lazy: lazyPage(() => import("@/features/signup/pages/SignUpPage")),
+      },
+      {
+        path: "signin",
+        lazy: lazyPage(() => import("@/features/signin/pages/SignInPage")),
+      },
+    ],
+  },
+]);

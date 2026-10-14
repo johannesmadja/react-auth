@@ -1,6 +1,6 @@
 .btn {
   padding: 5px 10px;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   cursor: pointer;
   transition: 0.2s ease-in-out opacity;
 
