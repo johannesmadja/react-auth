@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import styles from "./SignUpPage.module.scss";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { createUser } from "../services/userService";
+import { signUp } from "../services/authService";
 
 const validationSchema = yup.object({
   name: yup
@@ -40,7 +40,7 @@ function SignUpPage() {
 
   const submit = handleSubmit(async (credentials) => {
     try {
-      await createUser(credentials);
+      await signUp(credentials);
     } catch (error) {
       setError("root.serverError", {
         type: "server",

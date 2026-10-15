@@ -1,4 +1,4 @@
-const BASE_API_URL = "/api/users";
+// const BASE_API_URL = "/api/users";
 
 export async function apiFetch<T>(
   endpoint: string,
@@ -10,7 +10,7 @@ export async function apiFetch<T>(
     headers.set("Content-Type", "application/json");
   }
 
-  const response = await fetch(`${BASE_API_URL}${endpoint}`, {
+  const response = await fetch(`${endpoint}`, {
     ...options,
     headers,
   });

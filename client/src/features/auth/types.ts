@@ -7,3 +7,5 @@ export interface User {
 }
 
 export type UserInput = Omit<User, "_id" | "createdAt">;
+
+export type Credentials = Pick<User, "email" | "password">;
